@@ -1,0 +1,34 @@
+.all_screws{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+}
+
+img{
+    margin: 10px;
+    text-align: center;
+}
+
+.category{
+    margin: 10px;
+    color: darkblue;
+}
+
+.category_name {
+    text-decoration: none;
+    color: darkblue;
+}
+.category_name:hover {
+    top: 0;
+    left: 0;
+    text-decoration: underline;
+}
+
+.description{
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    justify-content: space-around;
+}
+

@@ -1,0 +1,17 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test project</title>
+    <link href="{% static "css/screw.css" %}" rel="stylesheet">
+</head>
+<body>
+<div class="all_screws">
+    {% block content %}
+
+    {% endblock %}
+</div>
+</body>
+</html>

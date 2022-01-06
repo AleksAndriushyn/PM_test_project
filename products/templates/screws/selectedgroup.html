@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div>
+        <a class="category_name" href="/allscrews">{{ category_name }}</a>>>{{ subgroup_name }}
+    </div>
+    {% for screw in screws %}
+        <div>
+            <a href="/selectedscrew?id={{ screw.id }}">
+            <div>
+                <img src="{% if screw.image %} /media/{{ screw.image }} {% else %} {% static "img/no_image.png" %} {% endif %}">
+            </div>
+            </a>
+            <div>{{ screw.name }}</div>
+        </div>
+    {% endfor %}
+{% endblock %}
+

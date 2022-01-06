@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div>
+        <a class="category_name" href="/allscrews">{{ category_name }}</a>>>{{ subgroup_name }}>>>{{ subsub_name }}
+    </div>
+    {% for screw in screws %}
+            <div>{{ screw.name }}</div>
+        <div class="description">
+            <div>
+                <img src="{% if screw.image %} /media/{{ screw.image }} {% else %} {% static "img/no_image.png" %} {% endif %}">
+            </div>
+            <div>
+                <table border="1" width="200">
+                    <tr>
+                        <th>Standard (group)</th>
+                        <th>Material</th>
+                        <th>Coating</th>
+                        <th>Head</th>
+                        <th>Spline</th>
+                        <th>Bit size</th>
+                        <th>Carving</th>
+                        <th>Usage</th>
+                        <th>For what base</th>
+                        <th>Diameter, mm</th>
+                        <th>Length, mm</th>
+                    </tr>
+                    <tr>
+                        <td>{{ screw.group_standard }}</td>
+                        <td>{{ screw.material }}</td>
+                        <td>{{ screw.coating }}</td>
+                        <td>{{ screw.head }}</td>
+                        <td>{{ screw.spline }}</td>
+                        <td>{{ screw.bit_size }}</td>
+                        <td>{{ screw.carving_type }}</td>
+                        <td>{{ screw.field_of_use }}</td>
+                        <td>{{ screw.base }}</td>
+                        <td>{{ screw.diameter }}</td>
+                        <td>{{ screw.length }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

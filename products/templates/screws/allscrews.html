@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% for category in categories %}
+        <div class="category">{{ category }}</div>
+        <a href="/selectedgroup?id={{ category.id }}">
+            <img src="{% if category.image %} {{ category.image.url }} {% else %} {% static "img/no_image.png" %} {% endif %}">
+        </a>
+    {% endfor %}
+{% endblock %}
