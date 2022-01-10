@@ -23,7 +23,7 @@ from products import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('products.urls', namespace='products')),
-    path('allscrews/', views.get_screw_categories),
+    path('', views.get_screw_categories),
     path('selectedgroup/', views.select_group),
     path('selectedscrew/', views.select_screw)
 ]

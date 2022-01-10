@@ -13,11 +13,17 @@ class Subgroup(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
 
 class Subsubgroup(models.Model):
     sub_group = models.ForeignKey(Subgroup, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
 
 
 class Screw(models.Model):
